@@ -1,0 +1,11 @@
+export declare enum CreateMode {
+  PERSISTENT = 0,
+  PERSISTENT_SEQUENTIAL = 2,
+  EPHEMERAL = 1,
+  EPHEMERAL_SEQUENTIAL = 3
+}
+
+export const PERSISTENT: CreateMode.PERSISTENT;
+export const PERSISTENT_SEQUENTIAL: CreateMode.PERSISTENT_SEQUENTIAL;
+export const EPHEMERAL: CreateMode.EPHEMERAL;
+export const EPHEMERAL_SEQUENTIAL: CreateMode.EPHEMERAL_SEQUENTIAL;
