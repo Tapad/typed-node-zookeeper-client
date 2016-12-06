@@ -14,9 +14,11 @@ import Transaction = require("./lib/Transaction");
 import ConnectionManager = require("./lib/ConnectionManager");
 
 export interface ClientOptions {
-  sessionTimeout: number;
-  spinDelay: number;
-  retries: number;
+  sessionTimeout?: number;
+  spinDelay?: number;
+  retries?: number;
+  sessionId?: Buffer;
+  sessionPassword?: Buffer;
 }
 export class Client extends EventEmitter {
   connectionManager: ConnectionManager;
@@ -89,7 +91,7 @@ export class Client extends EventEmitter {
   transaction(): Transaction;
 }
 
-export function createClient(): Client;
+export function createClient(connectionString: string, options?: ClientOptions): Client;
 
 export {
   ACL,
